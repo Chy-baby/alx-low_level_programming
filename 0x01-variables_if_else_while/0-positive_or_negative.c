@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
  #include <stdlib.h>
  #include <time.h>
 /**
@@ -6,9 +6,11 @@
   * Description: prints if a number is positive or negative.
   * Return: 0
   */
+
 int main(void)
 {
 	int n;
+
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	if (n > 0)
