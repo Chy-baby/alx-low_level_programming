@@ -21,7 +21,7 @@ void close_elf(int elf);
  * check_elf - Verifies if a file is an ELF file.
  * @e_ident: An indicator to an array holding the ELF magic numbers.
  *
- * Description: If the file is not an ELF file - use exit code 98.
+ * Description: If the file isn't an ELF file - exit code 98.
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -41,10 +41,10 @@ void check_elf(unsigned char *e_ident)
 }
 
 /**
- * print_magic  Shows the special numbers in an ELF header.
- * @e_ident: A pointer to a list with the unique ELF magic numbers.
+ * print_magic - Displays the magic digits of an ELF header.
+ * @e_ident: An indicator to an array holding the ELF magic numbers.
  *
- * Description: The magic numbers are spread out with spaces.
+ * Description: Magic digits are separated by spaces.
  */
 void print_magic(unsigned char *e_ident)
 {
@@ -65,7 +65,7 @@ void print_magic(unsigned char *e_ident)
 
 /**
  * print_class - Shows the class of an ELF header.
- * @e_ident: An indicator to an arraythat contains the ELF class.
+ * @e_ident: An indicator to an array holding the ELF class.
  */
 void print_class(unsigned char *e_ident)
 {
@@ -112,8 +112,8 @@ void print_data(unsigned char *e_ident)
 }
 
 /**
- * print_version - Shows the version of an ELF header.
- * @e_ident: An arrow to an array which contains the ELF version.
+ * print_version - Displays the version of an ELF header.
+ * @e_ident: An indicator to an array holding the ELF version.
  */
 void print_version(unsigned char *e_ident)
 {
@@ -132,7 +132,7 @@ void print_version(unsigned char *e_ident)
 }
 
 /**
- * print_osabi - Displays the OS/ABI of an ELF header.
+ * print_osabi - Shows the OS/ABI of an ELF header.
  * @e_ident: An indicator to an array holding the ELF version.
  */
 void print_osabi(unsigned char *e_ident)
@@ -177,8 +177,8 @@ void print_osabi(unsigned char *e_ident)
 }
 
 /**
- * print_abi - Shows the version of the system interface in the ELF header.
- * @e_ident: A pointer to a list with the version of the system interface in the ELF.
+ * print_abi - Shows the ABI version of an ELF header.
+ * @e_ident: An imdicator to an array containing the ELF ABI version.
  */
 void print_abi(unsigned char *e_ident)
 {
@@ -187,9 +187,9 @@ void print_abi(unsigned char *e_ident)
 }
 
 /**
- * print_type - Displays the category of the ELF header.
- * @e_type: The category of the ELF.
- * @e_ident: A pointer to a list with the kind of ELF category.
+ * print_type - Shows the type of an ELF header.
+ * @e_type: The ELF category.
+ * @e_ident: An indicator to an array holding the ELF class.
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
 {
@@ -221,9 +221,9 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 }
 
 /**
- * print_entry - Shows where the ELF header starts.
- * @e_entry: The location of the beginning of the ELF entry.
- * @e_ident: A pointer to a list with the type of ELF clas.
+ * print_entry - Displays the entry point of an ELF header.
+ * @e_entry: The location of the ELF entry point.
+ * @e_ident: An indicator to an array holding the ELF class.
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
@@ -245,9 +245,9 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 
 /**
  * close_elf - Shuts an ELF file.
- * @elf: The file identifier for the ELF file.
+ * @elf: The file designation of the ELF file.
  *
- * Description: If the file can't be shut down - use exit code 98.
+ * Description: If the file can't be shut down - exit code 98.
  */
 void close_elf(int elf)
 {
@@ -260,14 +260,15 @@ void close_elf(int elf)
 }
 
 /**
- * main - Shows the details in the beginning part of an ELF file.
- * @argc: The count of inputs given to the program.
- * @argv: A list of pointers to the inputs.
+ * main - Shows the details contained in the
+ *        ELF header at the beginning of an ELF file.
+ * @argc: The digit of inputs given to the program.
+ * @argv: An array of indicators to the inputs.
  *
  * Return: 0 on success.
  *
- * Description: If the file is not an ELF file
- *              or the process doesn't work - use exit code 98.
+ * Description: If the file isn't an ELF File or
+ *              the operation falters - exit code 98.
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
