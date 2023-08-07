@@ -7,7 +7,7 @@ void close_file(int fd);
 
 /**
  * create_buffer - Assigns 1024 bytes for a buffer.
- * @file: The name of the file the storage area is holding characters for.
+ * @file: The name of the file buffer is set aside chars for.
  *
  * Return: An indicator to the freshly-made storage area.
  */
@@ -54,7 +54,7 @@ void close_file(int fd)
  * Description: If the input is wrong - use exit code 97.
  *              If file_from is not there or can't be read - use exit code 98.
  *              If file_to can't be made or written to - use exit code 99.
- *              If file_to or file_from can't be shut properly - use exit code 100.
+ *              If file_to or file_from can't be shut properly - exit code 100.
  */
 int main(int argc, char *argv[])
 {
